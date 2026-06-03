@@ -6,6 +6,5 @@ RUN npm install && \
 
 FROM nginx:1.29.3-alpine AS runtime
 LABEL project="mynodejsproject"
-LABEL author="devopsteam"
 COPY --from=build /app/build /usr/share/nginx/html
 EXPOSE 3000    
